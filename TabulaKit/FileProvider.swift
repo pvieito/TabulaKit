@@ -1,5 +1,5 @@
 //
-//  TabulaPDF+Source.swift
+//  FileProvider.swift
 //  TabulaKit
 //
 //  Created by Pedro José Pereira Vieito on 05/04/2019.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-protocol TabulaSource {
-    func validFileURL(completionHandler: (URL) throws -> ()) throws
+protocol FileProvider {
+    func provideFileURL(completionHandler: (URL) throws -> ()) throws
 }
 
-extension URL: TabulaSource {
-    func validFileURL(completionHandler: (URL) throws -> ()) throws {
+extension URL: FileProvider {
+    func provideFileURL(completionHandler: (URL) throws -> ()) throws {
         try completionHandler(self)
     }
 }
 
-extension Data: TabulaSource {
-    func validFileURL(completionHandler: (URL) throws -> ()) throws {
+extension Data: FileProvider {
+    func provideFileURL(completionHandler: (URL) throws -> ()) throws {
         let temporaryURL = FileManager.default.temporaryDirectory
             .appendingPathComponent(UUID().uuidString)
             .appendingPathExtension("pdf")

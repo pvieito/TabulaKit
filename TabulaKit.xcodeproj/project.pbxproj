@@ -11,7 +11,7 @@
 		AA111F602257C8A900F3A9BB /* Tabula-1.0.2.jar in Resources */ = {isa = PBXBuildFile; fileRef = AA8BAE5D2257BA7800EE516F /* Tabula-1.0.2.jar */; };
 		AA111F612257D52300F3A9BB /* PythonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8BAE172256B1C400EE516F /* PythonKit.framework */; };
 		AA8BAE5A2257B3D400EE516F /* TabulaPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE592257B3D400EE516F /* TabulaPDF.swift */; };
-		AA8BAE5C2257B80400EE516F /* TabulaSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE5B2257B80400EE516F /* TabulaSource.swift */; };
+		AA8BAE5C2257B80400EE516F /* FileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE5B2257B80400EE516F /* FileProvider.swift */; };
 		AA8BAE612257BD8B00EE516F /* TabulaPDF+OutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE602257BD8B00EE516F /* TabulaPDF+OutputFormat.swift */; };
 		AA8BAE692257C63500EE516F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE682257C63500EE516F /* main.swift */; };
 		AA8BAE6D2257C72000EE516F /* TabulaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8BAE4A2257B2BB00EE516F /* TabulaKit.framework */; };
@@ -113,7 +113,7 @@
 		AA8BAE4A2257B2BB00EE516F /* TabulaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabulaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8BAE4D2257B2BB00EE516F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8BAE592257B3D400EE516F /* TabulaPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabulaPDF.swift; sourceTree = "<group>"; };
-		AA8BAE5B2257B80400EE516F /* TabulaSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabulaSource.swift; sourceTree = "<group>"; };
+		AA8BAE5B2257B80400EE516F /* FileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProvider.swift; sourceTree = "<group>"; };
 		AA8BAE5D2257BA7800EE516F /* Tabula-1.0.2.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "Tabula-1.0.2.jar"; sourceTree = "<group>"; };
 		AA8BAE602257BD8B00EE516F /* TabulaPDF+OutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabulaPDF+OutputFormat.swift"; sourceTree = "<group>"; };
 		AA8BAE662257C63500EE516F /* TabulaTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TabulaTool; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,7 +210,7 @@
 			children = (
 				AA8BAE592257B3D400EE516F /* TabulaPDF.swift */,
 				AA8BAE602257BD8B00EE516F /* TabulaPDF+OutputFormat.swift */,
-				AA8BAE5B2257B80400EE516F /* TabulaSource.swift */,
+				AA8BAE5B2257B80400EE516F /* FileProvider.swift */,
 				AA8BAE4D2257B2BB00EE516F /* Info.plist */,
 				AA8BAE5F2257BA8000EE516F /* Resources */,
 			);
@@ -441,7 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8BAE5C2257B80400EE516F /* TabulaSource.swift in Sources */,
+				AA8BAE5C2257B80400EE516F /* FileProvider.swift in Sources */,
 				AA8BAE612257BD8B00EE516F /* TabulaPDF+OutputFormat.swift in Sources */,
 				AA8BAE5A2257B3D400EE516F /* TabulaPDF.swift in Sources */,
 			);

@@ -10,13 +10,13 @@ import Foundation
 import FoundationKit
 
 public struct TabulaPDF {
-    private let source: TabulaSource
+    private let source: FileProvider
     private var guess: Bool = true
 
-    /// PDF pages where to extract the tables.
+    /// PDF pages from where to extract the tables.
     public var pages: [Int] = [1]
     
-    /// Password to read encrypted PDFs.
+    /// PDF password.
     public var password: String?
     
     /// Initializes a `TabulaPDF` instance.
@@ -35,12 +35,7 @@ public struct TabulaPDF {
 
 extension TabulaPDF {
     private static var bundle: Bundle {
-        #if XCODE
-        return Bundle(identifier: "com.pvieito.TabulaKit")!
-        #else
-        let bundleURL = URL(fileURLWithPath: #file).deletingLastPathComponent()
-        return Bundle(url: bundleURL)!
-        #endif
+        return Bundle.currentSourceFileDirectoryBundle()
     }
     
     private static let tabulaVersion = "1.0.2"
@@ -79,7 +74,7 @@ extension TabulaPDF {
         
         var outputData = Data()
         
-        try self.source.validFileURL { url in
+        try self.source.provideFileURL { url in
             let tabulaPath = TabulaPDF.javaTabulaArchive.path
             
             var arguments: [String] = []
