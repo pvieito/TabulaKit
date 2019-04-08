@@ -11,6 +11,7 @@ Swift framework to extract tables from PDFs, wrapping Java [`tabula`](https://gi
 You can extract tables from a PDF document using a `TabulaPDF` instance:
 
 ```swift
+import Foundation
 import TabulaKit
 
 let inputURL = URL(fileURLWithPath: "Invoice.pdf")
