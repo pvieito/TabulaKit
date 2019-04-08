@@ -1,5 +1,5 @@
 os: linux
-language: java
+language: generic
 sudo: required
 dist: xenial
 env:
