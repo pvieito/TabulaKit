@@ -13,6 +13,7 @@
 		AA111F8D225AC79000F3A9BB /* TabulaKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA111F8C225AC79000F3A9BB /* TabulaKitTests.swift */; };
 		AA111F8F225AC79000F3A9BB /* TabulaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8BAE4A2257B2BB00EE516F /* TabulaKit.framework */; };
 		AA111F97225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AA111F96225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf */; };
+		AA3046F1225AD01F006731F2 /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.json in Resources */ = {isa = PBXBuildFile; fileRef = AA3046F0225AD010006731F2 /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.json */; };
 		AA8BAE5A2257B3D400EE516F /* TabulaPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE592257B3D400EE516F /* TabulaPDF.swift */; };
 		AA8BAE5C2257B80400EE516F /* FileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE5B2257B80400EE516F /* FileProvider.swift */; };
 		AA8BAE612257BD8B00EE516F /* TabulaPDF+OutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE602257BD8B00EE516F /* TabulaPDF+OutputFormat.swift */; };
@@ -121,6 +122,7 @@
 		AA111F8C225AC79000F3A9BB /* TabulaKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabulaKitTests.swift; sourceTree = "<group>"; };
 		AA111F8E225AC79000F3A9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA111F96225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf"; sourceTree = "<group>"; };
+		AA3046F0225AD010006731F2 /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "A606EDB3-C62E-41E1-985D-C94FF4F76FB6.json"; sourceTree = "<group>"; };
 		AA558AC41EC284650099A8B0 /* LoggerKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoggerKit.xcodeproj; path = ../LoggerKit/LoggerKit.xcodeproj; sourceTree = "<group>"; };
 		AA558ACD1EC2853E0099A8B0 /* CommandLineKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommandLineKit.xcodeproj; path = ../CommandLineKit/CommandLineKit.xcodeproj; sourceTree = "<group>"; };
 		AA804BB32245241D0006A522 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				AA111F96225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf */,
+				AA3046F0225AD010006731F2 /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3046F1225AD01F006731F2 /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.json in Resources */,
 				AA111F97225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

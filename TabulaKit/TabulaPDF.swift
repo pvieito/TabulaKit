@@ -35,12 +35,12 @@ public struct TabulaPDF {
 
 extension TabulaPDF {
     private static var bundle: Bundle {
-        return Bundle.currentSourceFileDirectoryBundle()
+        return Bundle.currentModuleBundle()
     }
     
-    private static let tabulaVersion = "1.0.2"
+    private static let javaTabulaVersion = "1.0.2"
     private static var javaTabulaArchive: URL {
-        return bundle.url(forResource: "Tabula-\(tabulaVersion)", withExtension: "jar")!
+        return bundle.url(forResource: "Tabula-\(javaTabulaVersion)", withExtension: "jar")!
     }
     
     private func buildOptions(outputFormat: OutputFormat) -> [String] {

@@ -16,8 +16,15 @@ import TabulaKit
 let inputURL = URL(fileURLWithPath: "Invoice.pdf")
 let inputPDF = try TabulaPDF(contentsOf: inputURL)
 let extractedTables = try inputPDF.extractTables()
-print(extractedTables.count) // 1
-print(extractedTables[0]) // [["Service", "Cost"], ["mobilR", "13.95€"]]
+print(extractedTables.count)
+// 1
+print(extractedTables[0])
+// [
+//   ["Service", "Cost"],
+//   ["mobilR", "13.95€"],
+//   ["comboR", "46.90€"],
+//   ["Other", "17.70€"]
+// ]
 ```
 
 ### Swift Package Manager
