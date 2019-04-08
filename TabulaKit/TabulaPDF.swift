@@ -97,7 +97,9 @@ extension TabulaPDF {
     /// - Throws: Any error during the extraction.
     public func extractTables() throws -> [[[String?]]] {
         let outputData = try self.runJavaTabula()
-        let tables = try JSONSerialization.jsonObject(with: outputData) as! [Any]
+        guard let tables = try JSONSerialization.jsonObject(with: outputData) as? [Any] else {
+            throw NSError(description: "Error decoding malformed `tabula` output.")
+        }
 
         return tables.map { t -> [[String?]] in
             let t = t as! [String: Any]

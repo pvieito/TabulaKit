@@ -10,6 +10,9 @@
 		AA111F592257C83300F3A9BB /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA8B8911F2628C4000FB463 /* FoundationKit.framework */; };
 		AA111F602257C8A900F3A9BB /* Tabula-1.0.2.jar in Resources */ = {isa = PBXBuildFile; fileRef = AA8BAE5D2257BA7800EE516F /* Tabula-1.0.2.jar */; };
 		AA111F612257D52300F3A9BB /* PythonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8BAE172256B1C400EE516F /* PythonKit.framework */; };
+		AA111F8D225AC79000F3A9BB /* TabulaKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA111F8C225AC79000F3A9BB /* TabulaKitTests.swift */; };
+		AA111F8F225AC79000F3A9BB /* TabulaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8BAE4A2257B2BB00EE516F /* TabulaKit.framework */; };
+		AA111F97225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AA111F96225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf */; };
 		AA8BAE5A2257B3D400EE516F /* TabulaPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE592257B3D400EE516F /* TabulaPDF.swift */; };
 		AA8BAE5C2257B80400EE516F /* FileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE5B2257B80400EE516F /* FileProvider.swift */; };
 		AA8BAE612257BD8B00EE516F /* TabulaPDF+OutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BAE602257BD8B00EE516F /* TabulaPDF+OutputFormat.swift */; };
@@ -21,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AA111F90225AC79000F3A9BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA558AB21EC284590099A8B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA8BAE492257B2BB00EE516F;
+			remoteInfo = TabulaKit;
+		};
 		AA4ED9471F22A13000BB7254 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA558AC41EC284650099A8B0 /* LoggerKit.xcodeproj */;
@@ -106,6 +116,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA111F7B225AC48000F3A9BB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AA111F8A225AC79000F3A9BB /* TabulaKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabulaKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA111F8C225AC79000F3A9BB /* TabulaKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabulaKitTests.swift; sourceTree = "<group>"; };
+		AA111F8E225AC79000F3A9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA111F96225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf"; sourceTree = "<group>"; };
 		AA558AC41EC284650099A8B0 /* LoggerKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoggerKit.xcodeproj; path = ../LoggerKit/LoggerKit.xcodeproj; sourceTree = "<group>"; };
 		AA558ACD1EC2853E0099A8B0 /* CommandLineKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommandLineKit.xcodeproj; path = ../CommandLineKit/CommandLineKit.xcodeproj; sourceTree = "<group>"; };
 		AA804BB32245241D0006A522 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -123,6 +138,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA111F87225AC79000F3A9BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA111F8F225AC79000F3A9BB /* TabulaKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA8BAE472257B2BB00EE516F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +169,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA111F8B225AC79000F3A9BB /* TabulaKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA111F8C225AC79000F3A9BB /* TabulaKitTests.swift */,
+				AA111F8E225AC79000F3A9BB /* Info.plist */,
+				AA111F95225AC7B100F3A9BB /* Resources */,
+			);
+			name = TabulaKitTests;
+			path = Tests/TabulaKitTests;
+			sourceTree = "<group>";
+		};
+		AA111F95225AC7B100F3A9BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA111F96225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		AA558AB11EC284590099A8B0 = {
 			isa = PBXGroup;
 			children = (
@@ -153,9 +195,11 @@
 				AA558ACD1EC2853E0099A8B0 /* CommandLineKit.xcodeproj */,
 				AA558AC41EC284650099A8B0 /* LoggerKit.xcodeproj */,
 				AA8BAE0E2256B1BF00EE516F /* PythonKit.xcodeproj */,
+				AA111F7B225AC48000F3A9BB /* README.md */,
 				AA804BB32245241D0006A522 /* Package.swift */,
 				AA8BAE4B2257B2BB00EE516F /* TabulaKit */,
 				AA8BAE672257C63500EE516F /* TabulaTool */,
+				AA111F8B225AC79000F3A9BB /* TabulaKitTests */,
 				AA558ABB1EC284590099A8B0 /* Products */,
 				AA8BAE1C2256B20D00EE516F /* Frameworks */,
 			);
@@ -166,6 +210,7 @@
 			children = (
 				AA8BAE4A2257B2BB00EE516F /* TabulaKit.framework */,
 				AA8BAE662257C63500EE516F /* TabulaTool */,
+				AA111F8A225AC79000F3A9BB /* TabulaKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,6 +302,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		AA111F89225AC79000F3A9BB /* TabulaKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA111F92225AC79000F3A9BB /* Build configuration list for PBXNativeTarget "TabulaKitTests" */;
+			buildPhases = (
+				AA111F86225AC79000F3A9BB /* Sources */,
+				AA111F87225AC79000F3A9BB /* Frameworks */,
+				AA111F88225AC79000F3A9BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA111F91225AC79000F3A9BB /* PBXTargetDependency */,
+			);
+			name = TabulaKitTests;
+			productName = TabulaKitTests;
+			productReference = AA111F8A225AC79000F3A9BB /* TabulaKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AA8BAE492257B2BB00EE516F /* TabulaKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA8BAE582257B2BB00EE516F /* Build configuration list for PBXNativeTarget "TabulaKit" */;
@@ -302,6 +365,11 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Pedro José Pereira Vieito";
 				TargetAttributes = {
+					AA111F89225AC79000F3A9BB = {
+						CreatedOnToolsVersion = 10.2;
+						DevelopmentTeam = T7MC635YG5;
+						ProvisioningStyle = Automatic;
+					};
 					AA8BAE492257B2BB00EE516F = {
 						CreatedOnToolsVersion = 10.2;
 						DevelopmentTeam = T7MC635YG5;
@@ -348,6 +416,7 @@
 			targets = (
 				AA8BAE492257B2BB00EE516F /* TabulaKit */,
 				AA8BAE652257C63500EE516F /* TabulaTool */,
+				AA111F89225AC79000F3A9BB /* TabulaKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -426,6 +495,14 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AA111F88225AC79000F3A9BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA111F97225AC83700F3A9BB /* A606EDB3-C62E-41E1-985D-C94FF4F76FB6.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA8BAE482257B2BB00EE516F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,6 +514,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA111F86225AC79000F3A9BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA111F8D225AC79000F3A9BB /* TabulaKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA8BAE462257B2BB00EE516F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,7 +542,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AA111F91225AC79000F3A9BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA8BAE492257B2BB00EE516F /* TabulaKit */;
+			targetProxy = AA111F90225AC79000F3A9BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		AA111F93225AC79000F3A9BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/TabulaKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.TabulaKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA111F94225AC79000F3A9BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/TabulaKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.TabulaKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		AA558ABF1EC284590099A8B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -682,6 +819,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA111F92225AC79000F3A9BB /* Build configuration list for PBXNativeTarget "TabulaKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA111F93225AC79000F3A9BB /* Debug */,
+				AA111F94225AC79000F3A9BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AA558AB51EC284590099A8B0 /* Build configuration list for PBXProject "TabulaKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

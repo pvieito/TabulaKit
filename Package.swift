@@ -33,6 +33,10 @@ let package = Package(
             name: "TabulaKit",
             dependencies: ["FoundationKit"],
             path: "TabulaKit"
+        ),
+        .testTarget(
+            name: "TabulaKitTests",
+            dependencies: ["TabulaKit", "FoundationKit"]
         )
     ]
 )
