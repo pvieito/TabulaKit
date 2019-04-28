@@ -94,7 +94,7 @@ do {
     case .csv:
         outputString = String(extractedItemsTable.to_csv())!
     case .json:
-        outputString = String(extractedItemsTable.to_json(orient: "records"))!
+        outputString = String(extractedItemsTable.reset_index().to_json(orient: "records"))!
     }
     
     print(outputString)
