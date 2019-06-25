@@ -8,6 +8,5 @@ install:
   - mkdir -p $SWIFTENV_ROOT/versions/swift-PR-25685-247
   - tar xzf /tmp/swift-PR-25685-247-ubuntu16.04.tar.gz -C $SWIFTENV_ROOT/versions/swift-PR-25685-247/
   - swiftenv global swift-PR-25685-247
-  - swiftenv rehash
 script:
   - swift test --enable-test-discovery
