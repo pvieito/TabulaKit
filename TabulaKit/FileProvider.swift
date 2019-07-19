@@ -9,17 +9,17 @@
 import Foundation
 
 protocol FileProvider {
-    func provideFileURL(completionHandler: (URL) throws -> ()) throws
+    func provideFileURL(completionHandler: (URL) throws -> Void) throws
 }
 
 extension URL: FileProvider {
-    func provideFileURL(completionHandler: (URL) throws -> ()) throws {
+    func provideFileURL(completionHandler: (URL) throws -> Void) throws {
         try completionHandler(self)
     }
 }
 
 extension Data: FileProvider {
-    func provideFileURL(completionHandler: (URL) throws -> ()) throws {
+    func provideFileURL(completionHandler: (URL) throws -> Void) throws {
         let temporaryURL = FileManager.default.temporaryDirectory
             .appendingPathComponent(UUID().uuidString)
             .appendingPathExtension("pdf")

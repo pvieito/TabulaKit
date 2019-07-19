@@ -6,17 +6,17 @@
 //  Copyright © 2019 Pedro José Pereira Vieito. All rights reserved.
 //
 
+import CommandLineKit
 import Foundation
 import FoundationKit
 import LoggerKit
-import CommandLineKit
-import TabulaKit
 import PythonKit
+import TabulaKit
 
 enum OutputFormat: String, CaseIterable {
     case json
     case csv
-    
+
     static let `default`: OutputFormat = .csv
 }
 
@@ -58,12 +58,12 @@ do {
 
     for item in inputItems {
         Logger.log(debug: "Processing “\(item.lastPathComponent)” tables...")
-        
+
         let tabula = try TabulaPDF(contentsOf: item)
         let extractedTables = try tabula.extractTables()
         var extractedTable = PythonObject(extractedTables[tableIndexOption.value ?? 0])
         extractedTable = pd.DataFrame(extractedTable)
-        
+
         if let columnIndexes = columnIndexesOption.value?.compactMap(Int.init) {
             extractedTable = extractedTable[columnIndexes]
         }
@@ -73,30 +73,30 @@ do {
         if let columnNames = columnNamesOption.value {
             extractedTable.columns = PythonObject(columnNames)
         }
-        
+
         extractedTable["source_filename"] = PythonObject(item.deletingPathExtension().lastPathComponent)
         extractedItemsTable = extractedItemsTable.append(extractedTable)
-        
+
         Logger.log(debug: "Extraction of item “\(item.lastPathComponent)” completed with results: “\(extractedTable.to_json(orient: "records"))”")
 
         Logger.log(debug: "Extraction of item “\(item.lastPathComponent)” completed with results: “\(extractedTable)”")
     }
-    
+
     Logger.log(success: "Table extraction completed successfully for input items.")
-    
+
     extractedItemsTable.set_index("source_filename", inplace: true)
     extractedItemsTable.sort_index(inplace: true)
-    
+
     let outputFormat = outputFormatOption.value ?? .default
     let outputString: String
-    
+
     switch outputFormat {
     case .csv:
         outputString = String(extractedItemsTable.to_csv())!
     case .json:
         outputString = String(extractedItemsTable.reset_index().to_json(orient: "records"))!
     }
-    
+
     print(outputString)
 }
 catch {

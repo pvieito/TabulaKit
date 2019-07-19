@@ -13,7 +13,7 @@ extension TabulaPDF {
         case csv
         case tsv
         case json
-        
+
         static let `default`: OutputFormat = .json
     }
 }
