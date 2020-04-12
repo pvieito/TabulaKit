@@ -65,8 +65,7 @@ extension TabulaPDF {
 extension TabulaPDF {
     private func runJavaTabula(
         javaOptions: [String] = [],
-        outputFormat: OutputFormat = .json
-    ) throws -> Data {
+        outputFormat: OutputFormat = .json) throws -> Data {
         let javaOptions = javaOptions + [
             "-Djava.awt.headless=true",
             "-Dorg.slf4j.simpleLogger.defaultLogLevel=off",
