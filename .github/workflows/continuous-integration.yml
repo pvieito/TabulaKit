@@ -17,6 +17,6 @@ jobs:
       - name: Install Swift
         uses: YOCKOW/Action-setup-swift@master
         with:
-          swift-version: '5.1'
+          swift-version: '5.3'
       - name: Test
         run: swift test --enable-test-discovery

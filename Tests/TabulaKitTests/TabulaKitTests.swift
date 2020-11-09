@@ -15,7 +15,7 @@ class TabulaKitTests: XCTestCase {
         "A606EDB3-C62E-41E1-985D-C94FF4F76FB6",
     ]
 
-    static let testBundle = Bundle.currentModuleBundle()
+    static let testBundle = Bundle.module
 
     func testTabula() throws {
         for itemName in TabulaKitTests.resources {

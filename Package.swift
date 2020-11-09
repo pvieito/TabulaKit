@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
 
 import PackageDescription
 
@@ -32,11 +32,13 @@ let package = Package(
         .target(
             name: "TabulaKit",
             dependencies: ["FoundationKit"],
-            path: "TabulaKit"
+            path: "TabulaKit",
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "TabulaKitTests",
-            dependencies: ["TabulaKit", "FoundationKit"]
+            dependencies: ["TabulaKit", "FoundationKit"],
+            resources: [.process("Resources")]
         )
     ]
 )
