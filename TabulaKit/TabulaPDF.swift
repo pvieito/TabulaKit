@@ -35,7 +35,7 @@ public struct TabulaPDF {
 
 extension TabulaPDF {
     private static var bundle: Bundle {
-        return Bundle.currentModuleBundle()
+        return Bundle.module
     }
 
     private static let javaTabulaVersion = "1.0.2"
