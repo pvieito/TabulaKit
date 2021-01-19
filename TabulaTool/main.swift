@@ -25,25 +25,19 @@ struct TabulaTool: ParsableCommand {
     var tableIndex: Int?
     
     @Option(name: .long, parsing: .upToNextOption, help: "Column indexes.")
-    var columnIndexes: Array<Int>
+    var columnIndexes: Array<Int> = []
     
     @Option(name: .long, parsing: .upToNextOption, help: "Column names.")
-    var columnNames: Array<String>
+    var columnNames: Array<String> = []
 
     @Option(name: .long, parsing: .upToNextOption, help: "Row indexes.")
-    var rowIndexes: Array<Int>
+    var rowIndexes: Array<Int> = []
 
     @Option(name: .long, help: "Output format.")
     var outputFormat: OutputFormat?
 
     @Flag(name: .shortAndLong, help: "Verbose mode.")
-    var verbose: Bool
-    
-    func validate() throws {
-        guard !self.input.isEmpty else {
-            throw ValidationError("No input specified")
-        }
-    }
+    var verbose: Bool = false
     
     func run() throws {
         do {
