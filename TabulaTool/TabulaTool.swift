@@ -67,7 +67,7 @@ struct TabulaTool: ParsableCommand {
                 }
 
                 extractedTable["source_filename"] = PythonObject(inputURL.deletingPathExtension().lastPathComponent)
-                extractedItemsTable = extractedItemsTable.append(extractedTable)
+                extractedItemsTable = pd.concat([extractedItemsTable, extractedTable])
 
                 Logger.log(debug: "Extraction of item “\(inputURL.lastPathComponent)” completed with results: “\(extractedTable.to_json(orient: "records"))”")
 
@@ -87,6 +87,8 @@ struct TabulaTool: ParsableCommand {
                 outputString = String(extractedItemsTable.to_csv())!
             case .json:
                 outputString = String(extractedItemsTable.reset_index().to_json(orient: "records"))!
+            case .jsonl:
+                outputString = String(extractedItemsTable.reset_index().to_json(orient: "records", lines: true))!
             }
 
             print(outputString)

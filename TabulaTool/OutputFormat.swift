@@ -11,6 +11,7 @@ import ArgumentParser
 
 enum OutputFormat: String, CaseIterable, ExpressibleByArgument {
     case json
+    case jsonl
     case csv
 
     static let `default`: OutputFormat = .csv
