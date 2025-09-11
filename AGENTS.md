@@ -15,13 +15,13 @@ This file provides critical development and deployment guidelines for AI agents 
 - Follow protocol-oriented design patterns.
 - **CRITICAL: Always check FoundationKit, LoggerKit, SwiftUIKit, and other core frameworks before implementing basic functionality.** These frameworks contain extensive extensions and utilities that avoid code duplication.
 
-#### Common Extended Classes in Core Frameworks:
+#### Core Frameworks Extensions Examples
 - **NSError**: `NSError(description:, recoverySuggestion:)` convenience initializer
 - **NSAppleScript**: `execute()` method with proper Swift error handling  
 - **ProcessInfo**: `launchExtensionsPaneInSystemSettings()`, `launchPrivacyAndSecurityPaneInSystemSettings()`
 - **URL**: `open(withAppBundleIdentifier:)` for cross-platform URL opening
 - **Process**: Enhanced execution utilities with output capture
-- **UserDefaults**: `@UserDefaults.Wrapper` property wrapper for cleaner preferences
+- **UserDefaults**: `@UserDefaults.Wrapper` property wrapper for cleaner app preferences
 
 ### Working with External SwiftPM Dependencies
 - External dependencies are separate SwiftPM repositories shared across multiple apps.
