@@ -1,11 +1,11 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 
 import PackageDescription
 
 let package = Package(
     name: "TabulaKit",
     platforms: [
-        .macOS(.v10_13)
+        .macOS(.v12)
     ],
     products: [
         .executable(
@@ -18,13 +18,13 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "git@github.com:pvieito/LoggerKit.git", .branch("master")),
-        .package(url: "git@github.com:pvieito/FoundationKit.git", .branch("master")),
-        .package(url: "git@github.com:pvieito/PythonKit.git", .branch("master")),
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.0.1"),
+        .package(url: "git@github.com:pvieito/LoggerKit.git", branch: "master"),
+        .package(url: "git@github.com:pvieito/FoundationKit.git", branch: "master"),
+        .package(url: "git@github.com:pvieito/PythonKit.git", branch: "master"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "TabulaTool",
             dependencies: ["LoggerKit", "FoundationKit", "TabulaKit", "PythonKit", .product(name: "ArgumentParser", package: "swift-argument-parser")],
             path: "TabulaTool"

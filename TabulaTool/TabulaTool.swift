@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  TabulaTool.swift
 //  TabulaTool
 //
 //  Created by Pedro José Pereira Vieito on 05/04/2019.
@@ -13,6 +13,7 @@ import PythonKit
 import TabulaKit
 import ArgumentParser
 
+@main
 struct TabulaTool: ParsableCommand {
     static var configuration: CommandConfiguration {
         return CommandConfiguration(commandName: String(describing: Self.self))
@@ -96,4 +97,3 @@ struct TabulaTool: ParsableCommand {
     }
 }
 
-TabulaTool.main()
