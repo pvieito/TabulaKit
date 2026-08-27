@@ -4,7 +4,7 @@ Swift framework to extract tables from PDFs, wrapping Java [`tabula`](https://gi
 
 ## Requirements
 
-`TabulaKit` requires [**Swift 5**](https://swift.org/download/) and **Java**. It has been tested on macOS, Linux and Windows.
+`TabulaKit` requires [**Swift 5**](https://swift.org/download/) and **Java**. It has been tested on macOS, Linux, and Windows.
 
 ## Usage
 
