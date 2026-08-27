@@ -1,4 +1,4 @@
-#  TabulaKit
+# TabulaKit
 
 Swift framework to extract tables from PDFs, wrapping Java [`tabula`](https://github.com/tabulapdf/tabula-java).
 
