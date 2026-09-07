@@ -1,11 +1,11 @@
-// swift-tools-version:5.9
+// swift-tools-version:6.2
 
 import PackageDescription
 
 let package = Package(
     name: "TabulaKit",
     platforms: [
-        .macOS(.v12)
+        .macOS(.v26),
     ],
     products: [
         .executable(
@@ -26,19 +26,31 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "TabulaTool",
-            dependencies: ["LoggerKit", "FoundationKit", "TabulaKit", "PythonKit", .product(name: "ArgumentParser", package: "swift-argument-parser")],
+            dependencies: [
+                "LoggerKit",
+                "FoundationKit",
+                "TabulaKit",
+                "PythonKit",
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+            ],
             path: "TabulaTool"
         ),
         .target(
             name: "TabulaKit",
-            dependencies: ["FoundationKit"],
+            dependencies: [
+                "FoundationKit",
+            ],
             path: "TabulaKit",
             resources: [.process("Resources")]
         ),
         .testTarget(
             name: "TabulaKitTests",
-            dependencies: ["TabulaKit", "FoundationKit"],
+            dependencies: [
+                "TabulaKit",
+                "FoundationKit",
+            ],
             resources: [.process("Resources")]
         )
-    ]
+    ],
+    swiftLanguageModes: [.v5]
 )
